@@ -1,0 +1,3 @@
+# AI produces advisory Suggestions only, never reviews
+
+The reviewer's AI output is an advisory Suggestion for an unreviewed Tracker; it never sets `reviewed` and never auto-applies the `necessary` category. An administrator must accept (or edit) each Suggestion, and that acceptance is the only thing that writes a review through Kjeks. We chose this to preserve Kjeks's core invariant ("admins review; nothing is auto-classified as necessary") and because AI classification of consent categories carries legal risk that a human must own. The cost is that AI never fully automates review; `necessary` suggestions are further excluded from any bulk-accept and require individual confirmation.

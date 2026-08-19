@@ -1,0 +1,3 @@
+# Suggestions are stored separately from the Kjeks Tracker
+
+Suggestions live in this add-on's own network option (`kjeks_ai_suggestions`, keyed by tracker id), not as new fields on Kjeks's `Tracker`. The Tracker value object is owned by Kjeks and immutable; the add-on integrates through Kjeks's public surface (`TrackerRegistry`, `Tracker::with_review()`, the network-config REST route) rather than extending its data model. We chose this to keep the boundary clean: the add-on can be removed without leaving orphan fields in Kjeks's registry, and accepting a Suggestion flows through Kjeks's single review path. A Suggestion is pruned when its Tracker becomes reviewed or is removed. The cost is a second store to keep in sync with the registry.

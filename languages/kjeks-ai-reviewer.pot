@@ -1,0 +1,207 @@
+# Copyright (C) 2026 Per Søderlind
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kjeks AI Reviewer 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/kjeks-ai-reviewer\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-19T10:16:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: kjeks-ai-reviewer\n"
+
+#. Plugin Name of the plugin
+#: kjeks-ai-reviewer.php
+msgid "Kjeks AI Reviewer"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: kjeks-ai-reviewer.php
+msgid "https://github.com/soderlind/kjeks-ai-reviewer"
+msgstr ""
+
+#. Description of the plugin
+#: kjeks-ai-reviewer.php
+msgid "On WordPress 7+, uses the core AI client to suggest classifications and enriched metadata for unreviewed cookies in the Kjeks registry. Suggestions are advisory; an administrator confirms every one."
+msgstr ""
+
+#. Author of the plugin
+#: kjeks-ai-reviewer.php
+msgid "Per Søderlind"
+msgstr ""
+
+#. Author URI of the plugin
+#: kjeks-ai-reviewer.php
+msgid "https://soderlind.no"
+msgstr ""
+
+#: src/AiClient.php:32
+#: src/Rest/SuggestController.php:95
+msgid "This site does not support the AI client."
+msgstr ""
+
+#: src/AiClient.php:36
+msgid "The AI client is not available."
+msgstr ""
+
+#: src/AiReviewer.php:76
+msgid "No suggestion exists for this tracker."
+msgstr ""
+
+#: src/AiReviewer.php:81
+msgid "Invalid category."
+msgstr ""
+
+#: src/AiReviewer.php:87
+msgid "The tracker no longer exists."
+msgstr ""
+
+#: src/Plugin.php:54
+msgid "Kjeks AI Reviewer requires the Kjeks plugin to be active."
+msgstr ""
+
+#: src/Reviewer.php:94
+msgid "Matched a known entry in the Open Cookie Database."
+msgstr ""
+
+#: src/SchemaValidator.php:32
+msgid "The model did not return valid JSON."
+msgstr ""
+
+#: src/SchemaValidator.php:48
+msgid "The suggestion confidence was too low; leaving for manual review."
+msgstr ""
+
+#: assets/src/index.js:30
+#: build/index.js:1
+msgid "Necessary"
+msgstr ""
+
+#: assets/src/index.js:31
+#: build/index.js:1
+msgid "Preferences"
+msgstr ""
+
+#: assets/src/index.js:32
+#: build/index.js:1
+msgid "Analytics"
+msgstr ""
+
+#: assets/src/index.js:33
+#: build/index.js:1
+msgid "Marketing"
+msgstr ""
+
+#: assets/src/index.js:65
+#: build/index.js:1
+#, js-format
+msgid "%d%% confidence"
+msgstr ""
+
+#: assets/src/index.js:67
+#: build/index.js:1
+msgid "No suggestion yet"
+msgstr ""
+
+#: assets/src/index.js:79
+#: build/index.js:1
+msgid "Grounded"
+msgstr ""
+
+#: assets/src/index.js:99
+#: build/index.js:1
+msgid "Accept"
+msgstr ""
+
+#: assets/src/index.js:110
+#: build/index.js:1
+msgid "Reject"
+msgstr ""
+
+#. translators: 1: suggested count, 2: processed count, 3: error count
+#: assets/src/index.js:148
+#: build/index.js:2
+#, js-format
+msgid "Suggested %1$d of %2$d processed (%3$d skipped)."
+msgstr ""
+
+#: assets/src/index.js:164
+#: build/index.js:1
+msgid "Suggestion accepted and review recorded."
+msgstr ""
+
+#: assets/src/index.js:187
+#: build/index.js:2
+msgid "No high-confidence, non-necessary suggestions to accept."
+msgstr ""
+
+#: assets/src/index.js:197
+#: build/index.js:2
+#, js-format
+msgid "Accepted %d high-confidence suggestions."
+msgstr ""
+
+#: assets/src/index.js:222
+#: build/index.js:1
+msgid "This site does not support the WordPress AI client, so suggestions are unavailable."
+msgstr ""
+
+#: assets/src/index.js:247
+#: build/index.js:1
+#, js-format
+msgid "%d unreviewed cookies pending."
+msgstr ""
+
+#: assets/src/index.js:255
+#: build/index.js:2
+msgid "Working…"
+msgstr ""
+
+#: assets/src/index.js:255
+#: build/index.js:2
+msgid "Generate suggestions"
+msgstr ""
+
+#: assets/src/index.js:260
+#: build/index.js:2
+msgid "Accept high-confidence"
+msgstr ""
+
+#: assets/src/index.js:266
+#: build/index.js:2
+msgid "Generate suggestions automatically once a week"
+msgstr ""
+
+#: assets/src/index.js:282
+#: build/index.js:2
+msgid "Cookie"
+msgstr ""
+
+#: assets/src/index.js:283
+#: build/index.js:2
+msgid "Suggested category"
+msgstr ""
+
+#: assets/src/index.js:284
+#: build/index.js:2
+msgid "Details"
+msgstr ""
+
+#: assets/src/index.js:285
+#: build/index.js:2
+msgid "Actions"
+msgstr ""
+
+#: assets/src/index.js:296
+#: build/index.js:2
+msgid "Nothing pending — every cookie has been reviewed."
+msgstr ""
+
+#: assets/src/index.js:305
+#: build/index.js:2
+msgid "AI Reviewer"
+msgstr ""

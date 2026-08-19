@@ -1,0 +1,13 @@
+parameters:
+	level: 8
+	paths:
+		- src
+	bootstrapFiles:
+		- kjeks-ai-reviewer.php
+	scanDirectories:
+		- src
+	treatPhpDocTypesAsCertain: false
+	ignoreErrors:
+		# Kjeks classes are only present when the kjeks plugin is active.
+		- '#Class Soderlind\\Kjeks\\#'
+		- '#Call to (static )?method .* on an unknown class Soderlind\\Kjeks\\#'

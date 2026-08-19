@@ -1,0 +1,3 @@
+# Ground before generate
+
+Before asking the model, the reviewer looks each cookie up in a bundled, pinned snapshot of the Open Cookie Database (matching name, then name pattern, then domain). The model is only asked about cookies with no ground match. Grounded Suggestions are tagged `grounded_by` and carry higher confidence. We chose this for accuracy and cost: well-known cookies get deterministic answers, the model handles the long tail, and per-run AI calls drop sharply — amplified by Kjeks aggregating one registry entry per unique cookie network-wide. The cost is bundling and periodically refreshing the snapshot.

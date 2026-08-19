@@ -1,0 +1,230 @@
+{
+	"_meta": {
+		"source": "Open Cookie Database (https://github.com/jkwakman/Open-Cookie-Database)",
+		"license": "GPL-3.0",
+		"snapshot": "curated-sample-v1",
+		"note": "Pinned curated subset bundled for deterministic grounding. Refresh via docs/grounding.md."
+	},
+	"entries": [
+		{
+			"name": "_ga",
+			"domain": "google-analytics.com",
+			"pattern": "^_ga$",
+			"provider": "Google Analytics",
+			"category": "analytics",
+			"purpose": "Registers a unique ID that is used to generate statistical data on how the visitor uses the website.",
+			"retention": "2 years",
+			"party": "third",
+			"documentation_url": "https://support.google.com/analytics/answer/11397207"
+		},
+		{
+			"name": "_ga_",
+			"domain": "google-analytics.com",
+			"pattern": "^_ga_.+",
+			"provider": "Google Analytics",
+			"category": "analytics",
+			"purpose": "Used by Google Analytics to persist session state.",
+			"retention": "2 years",
+			"party": "third",
+			"documentation_url": "https://support.google.com/analytics/answer/11397207"
+		},
+		{
+			"name": "_gid",
+			"domain": "google-analytics.com",
+			"pattern": "^_gid$",
+			"provider": "Google Analytics",
+			"category": "analytics",
+			"purpose": "Registers a unique ID that is used to generate statistical data on how the visitor uses the website.",
+			"retention": "1 day",
+			"party": "third",
+			"documentation_url": "https://support.google.com/analytics/answer/11397207"
+		},
+		{
+			"name": "_gcl_au",
+			"domain": "google.com",
+			"pattern": "^_gcl_au$",
+			"provider": "Google Ads",
+			"category": "marketing",
+			"purpose": "Used by Google AdSense for experimenting with advertisement efficiency across websites.",
+			"retention": "3 months",
+			"party": "third",
+			"documentation_url": "https://business.safety.google/adscookies/"
+		},
+		{
+			"name": "_gat",
+			"domain": "google-analytics.com",
+			"pattern": "^_gat",
+			"provider": "Google Analytics",
+			"category": "analytics",
+			"purpose": "Used by Google Analytics to throttle request rate.",
+			"retention": "1 day",
+			"party": "third",
+			"documentation_url": "https://support.google.com/analytics/answer/11397207"
+		},
+		{
+			"name": "_fbp",
+			"domain": "facebook.com",
+			"pattern": "^_fbp$",
+			"provider": "Meta Platforms",
+			"category": "marketing",
+			"purpose": "Used by Meta to deliver a series of advertisement products such as real time bidding from third party advertisers.",
+			"retention": "3 months",
+			"party": "third",
+			"documentation_url": "https://www.facebook.com/policies/cookies/"
+		},
+		{
+			"name": "fr",
+			"domain": "facebook.com",
+			"pattern": "^fr$",
+			"provider": "Meta Platforms",
+			"category": "marketing",
+			"purpose": "Contains a unique browser and user ID, used for targeted advertising.",
+			"retention": "3 months",
+			"party": "third",
+			"documentation_url": "https://www.facebook.com/policies/cookies/"
+		},
+		{
+			"name": "IDE",
+			"domain": "doubleclick.net",
+			"pattern": "^IDE$",
+			"provider": "Google DoubleClick",
+			"category": "marketing",
+			"purpose": "Used by Google DoubleClick to register and report the website user's actions after viewing or clicking an advertisement.",
+			"retention": "1 year",
+			"party": "third",
+			"documentation_url": "https://business.safety.google/adscookies/"
+		},
+		{
+			"name": "test_cookie",
+			"domain": "doubleclick.net",
+			"pattern": "^test_cookie$",
+			"provider": "Google DoubleClick",
+			"category": "marketing",
+			"purpose": "Used to check if the user's browser supports cookies.",
+			"retention": "1 day",
+			"party": "third",
+			"documentation_url": "https://business.safety.google/adscookies/"
+		},
+		{
+			"name": "_hjSessionUser_",
+			"domain": "hotjar.com",
+			"pattern": "^_hjSessionUser_.+",
+			"provider": "Hotjar",
+			"category": "analytics",
+			"purpose": "Ensures data from subsequent visits to the same site are attributed to the same user ID.",
+			"retention": "1 year",
+			"party": "third",
+			"documentation_url": "https://help.hotjar.com/hc/en-us/articles/6952777582999"
+		},
+		{
+			"name": "_hjSession_",
+			"domain": "hotjar.com",
+			"pattern": "^_hjSession_.+",
+			"provider": "Hotjar",
+			"category": "analytics",
+			"purpose": "Holds current session data.",
+			"retention": "1 day",
+			"party": "third",
+			"documentation_url": "https://help.hotjar.com/hc/en-us/articles/6952777582999"
+		},
+		{
+			"name": "__stripe_mid",
+			"domain": "stripe.com",
+			"pattern": "^__stripe_mid$",
+			"provider": "Stripe",
+			"category": "security",
+			"purpose": "Used for fraud prevention and to identify the device used to complete a transaction.",
+			"retention": "1 year",
+			"party": "third",
+			"documentation_url": "https://stripe.com/legal/cookies-policy"
+		},
+		{
+			"name": "__stripe_sid",
+			"domain": "stripe.com",
+			"pattern": "^__stripe_sid$",
+			"provider": "Stripe",
+			"category": "security",
+			"purpose": "Used for fraud prevention and to identify the device used to complete a transaction.",
+			"retention": "30 minutes",
+			"party": "third",
+			"documentation_url": "https://stripe.com/legal/cookies-policy"
+		},
+		{
+			"name": "PHPSESSID",
+			"domain": "",
+			"pattern": "^PHPSESSID$",
+			"provider": "PHP",
+			"category": "functional",
+			"purpose": "Preserves user session state across page requests.",
+			"retention": "session",
+			"party": "first",
+			"documentation_url": "https://www.php.net/manual/en/function.session-start.php"
+		},
+		{
+			"name": "wordpress_logged_in_",
+			"domain": "",
+			"pattern": "^wordpress_logged_in_.+",
+			"provider": "WordPress",
+			"category": "functional",
+			"purpose": "Keeps a logged-in user authenticated after sign-in.",
+			"retention": "session",
+			"party": "first",
+			"documentation_url": "https://developer.wordpress.org/apis/security/cookies/"
+		},
+		{
+			"name": "wp-settings-",
+			"domain": "",
+			"pattern": "^wp-settings-.+",
+			"provider": "WordPress",
+			"category": "preferences",
+			"purpose": "Persists a user's admin interface preferences.",
+			"retention": "1 year",
+			"party": "first",
+			"documentation_url": "https://developer.wordpress.org/apis/security/cookies/"
+		},
+		{
+			"name": "NID",
+			"domain": "google.com",
+			"pattern": "^NID$",
+			"provider": "Google",
+			"category": "marketing",
+			"purpose": "Stores a unique ID used to remember preferences and other information such as preferred language.",
+			"retention": "6 months",
+			"party": "third",
+			"documentation_url": "https://policies.google.com/technologies/cookies"
+		},
+		{
+			"name": "YSC",
+			"domain": "youtube.com",
+			"pattern": "^YSC$",
+			"provider": "YouTube",
+			"category": "marketing",
+			"purpose": "Registers a unique ID to keep statistics of what videos from YouTube the user has seen.",
+			"retention": "session",
+			"party": "third",
+			"documentation_url": "https://policies.google.com/technologies/cookies"
+		},
+		{
+			"name": "VISITOR_INFO1_LIVE",
+			"domain": "youtube.com",
+			"pattern": "^VISITOR_INFO1_LIVE$",
+			"provider": "YouTube",
+			"category": "marketing",
+			"purpose": "Tries to estimate the users' bandwidth on pages with integrated YouTube videos.",
+			"retention": "6 months",
+			"party": "third",
+			"documentation_url": "https://policies.google.com/technologies/cookies"
+		},
+		{
+			"name": "cf_clearance",
+			"domain": "cloudflare.com",
+			"pattern": "^cf_clearance$",
+			"provider": "Cloudflare",
+			"category": "security",
+			"purpose": "Stores proof of a challenge passed; used to restrict access to protected resources.",
+			"retention": "1 year",
+			"party": "third",
+			"documentation_url": "https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/"
+		}
+	]
+}

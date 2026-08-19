@@ -1,0 +1,35 @@
+.kjeks-ai {
+	margin-top: 12px;
+}
+
+.kjeks-ai .components-card {
+	margin-bottom: 16px;
+}
+
+.kjeks-ai__table {
+	margin-top: 8px;
+}
+
+.kjeks-ai__table td {
+	vertical-align: top;
+}
+
+.kjeks-ai__muted {
+	color: #757575;
+	font-size: 12px;
+}
+
+.kjeks-ai__badge {
+	display: inline-block;
+	margin-top: 4px;
+	padding: 1px 6px;
+	border-radius: 2px;
+	background: #edfaef;
+	color: #007017;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.kjeks-ai__actions .components-button {
+	margin-right: 6px;
+}
