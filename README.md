@@ -10,6 +10,15 @@ Every suggestion is **advisory**. The reviewer never sets a cookie's *reviewed* 
 - WordPress 7.0+ with a working AI provider (the plugin hides its UI when `wp_supports_ai()` is false)
 - PHP 8.3+
 
+## Installation
+
+1. Install and activate [Kjeks](https://github.com/soderlind/kjeks) first — this add-on requires it.
+2. Download the latest [`kjeks-ai-reviewer.zip`](https://github.com/soderlind/kjeks-ai-reviewer/releases/latest/download/kjeks-ai-reviewer.zip).
+3. In WordPress, go to **Plugins → Add New → Upload Plugin** and upload the zip.
+4. Activate the plugin (on multisite, **Network Activate** it).
+
+The plugin updates itself automatically via GitHub releases using [plugin-update-checker](https://github.com/YahnisElsts/plugin-update-checker).
+
 ## How it works
 
 1. **Ground before generate.** Each unreviewed cookie is first matched against a pinned snapshot of the [Open Cookie Database](https://github.com/jkwakman/Open-Cookie-Database). A confident local match becomes a suggestion with **no AI call**. A partial match seeds the prompt so the model only fills gaps.
