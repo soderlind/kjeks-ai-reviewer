@@ -21,7 +21,7 @@ use WP_REST_Response;
  * POST /kjeks-ai/v1/suggest  — generate suggestions for the pending batch.
  * POST /kjeks-ai/v1/settings — toggle the opt-in weekly cron.
  *
- * All routes require the manage_network capability.
+ * All routes require `manage_network` on multisite, `manage_options` on single-site.
  */
 final class SuggestController {
 
@@ -82,7 +82,7 @@ final class SuggestController {
 	}
 
 	public function can_manage(): bool {
-		return current_user_can( 'manage_network' );
+		return is_multisite() ? current_user_can( 'manage_network' ) : current_user_can( 'manage_options' );
 	}
 
 	public function state(): WP_REST_Response {

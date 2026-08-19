@@ -19,7 +19,8 @@ use WP_REST_Response;
  * POST /kjeks-ai/v1/reject — discard a suggestion without touching the registry.
  *
  * Accepting `necessary` is single-item only; there is no bulk path for it, which
- * is enforced in the UI. Both routes require the manage_network capability.
+ * is enforced in the UI. Both routes require `manage_network` on multisite,
+ * `manage_options` on single-site.
  */
 final class AcceptController {
 
@@ -71,7 +72,7 @@ final class AcceptController {
 	}
 
 	public function can_manage(): bool {
-		return current_user_can( 'manage_network' );
+		return is_multisite() ? current_user_can( 'manage_network' ) : current_user_can( 'manage_options' );
 	}
 
 	public function accept( WP_REST_Request $request ): WP_REST_Response {
