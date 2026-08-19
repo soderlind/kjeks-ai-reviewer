@@ -40,6 +40,8 @@ The reviewer appears as an **AI Reviewer** tab on the Kjeks Cookie Consent scree
 
 This tool assists classification; it is **not** a compliance guarantee. Always review suggestions against your own knowledge of each cookie before accepting.
 
+The reviewer errs **conservatively**: it chooses `necessary` only for clearly essential items, prefers `marketing` when unsure, and maps any unrecognised label to `marketing` (never `necessary`). Genuinely third-party resources like Google Fonts or Gravatar are therefore usually suggested as `marketing` — a safe default, not a bug. Override the category on **Accept** if you disagree, or self-host the resource to keep it first-party.
+
 ## Development
 
 ```bash
