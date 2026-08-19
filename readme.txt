@@ -31,7 +31,7 @@ This tool assists classification; it is not a compliance guarantee.
 
 1. Install and network-activate Kjeks.
 2. Upload and network-activate Kjeks AI Reviewer.
-3. Open Network Admin → Kjeks and select the "AI Reviewer" tab.
+3. Open the Kjeks Cookie Consent screen (Network Admin on multisite, or the admin menu on single-site) and select the "AI Reviewer" tab.
 
 The tab is hidden if the site does not support the AI client.
 

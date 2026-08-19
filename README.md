@@ -19,7 +19,7 @@ Every suggestion is **advisory**. The reviewer never sets a cookie's *reviewed* 
 
 ## Using it
 
-The reviewer appears as an **AI Reviewer** tab on the Kjeks network admin screen (Network Admin → Kjeks).
+The reviewer appears as an **AI Reviewer** tab on the Kjeks Cookie Consent screen (Network Admin on multisite, the admin menu on single-site).
 
 - **Generate suggestions** — runs a batch (capped at 25 unique cookies) over the pending set.
 - **Accept** — applies the suggested (or overridden) category and enriches empty fields, then records the normal Kjeks review.

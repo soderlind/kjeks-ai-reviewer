@@ -40,7 +40,7 @@ flowchart TD
 | `AiReviewer`                | Batch orchestration; accept/reject; enrichment on accept.            |
 | `Suggestion` / `SuggestionStore` | Value object and its own network-option store (separate from the registry). |
 | `Cron`                      | Optional opt-in weekly pass.                                          |
-| `Rest\SuggestController` / `Rest\AcceptController` | `kjeks-ai/v1` endpoints (`manage_network`). |
+| `Rest\SuggestController` / `Rest\AcceptController` | `kjeks-ai/v1` endpoints (`manage_network` on multisite, `manage_options` on single-site). |
 | `Admin\ReviewerTab`         | Enqueues the React bundle that registers the tab via `kjeks.networkAdminTabs`. |
 
 ## Boundaries
