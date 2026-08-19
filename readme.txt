@@ -4,7 +4,7 @@ Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.3
 Requires Plugins: kjeks
-Stable tag: 0.3.0
+Stable tag: 0.3.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ This tool assists classification; it is not a compliance guarantee.
 The tab is hidden if the site does not support the AI client.
 
 == Changelog ==
+
+= 0.3.1 =
+* Support single-site installs: the suggest/accept REST routes fall back to manage_options when not multisite.
 
 = 0.3.0 =
 * Initial release.
