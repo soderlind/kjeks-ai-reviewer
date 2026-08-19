@@ -4,6 +4,10 @@ Kjeks AI Reviewer is a thin, advisory layer on top of the Kjeks registry. It
 adds no data model of its own to Kjeks; it produces **suggestions** that an
 administrator turns into normal Kjeks reviews.
 
+> Part of the **kjeks family**. How this add-on plugs into the core (the
+> `TrackerRegistry` and the `kjeks.networkAdminTabs` filter) is mapped in the
+> [kjeks ecosystem overview](https://github.com/soderlind/kjeks/blob/main/docs/architecture.md#9-ecosystem-the-kjeks-family).
+
 ## Control flow
 
 ```mermaid
