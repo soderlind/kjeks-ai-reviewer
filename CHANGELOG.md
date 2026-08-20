@@ -5,6 +5,22 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-08-20
+
+### Added
+
+- Bulk review: row checkboxes and a select-all control let you accept or reject multiple suggestions at once. Bulk accept skips `necessary` (accept those individually).
+- Norwegian Bokmål (nb_NO) translation, including JavaScript strings via `i18n-map.json`, plus npm i18n scripts.
+
+### Changed
+
+- Reviewer UX aligned with the main Kjeks review screen: accept a suggestion by ticking its "Reviewed" checkbox. Replaces the per-row "Accept" button and the "Accept high-confidence" bulk button.
+
+### Documentation
+
+- Clarified the conservative category bias and accept-time override.
+- Added a ZIP-download installation section.
+
 ## [0.4.0] - 2026-08-19
 
 ### Added

@@ -14,6 +14,31 @@
 	vertical-align: top;
 }
 
+.kjeks-ai__table .check-column {
+	width: 2.5rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.kjeks-ai__table .check-column .components-base-control__field,
+.kjeks-ai__table .check-column .components-checkbox-control,
+.kjeks-ai__table .check-column .components-flex {
+	margin: 0;
+	justify-content: center;
+}
+
+.kjeks-ai__bulk {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	margin-bottom: 0.75rem;
+	background: #f0f6fc;
+	border: 1px solid #c3ddfd;
+	border-radius: 4px;
+}
+
 .kjeks-ai__muted {
 	color: #757575;
 	font-size: 12px;

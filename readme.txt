@@ -4,7 +4,7 @@ Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.3
 Requires Plugins: kjeks
-Stable tag: 0.4.0
+Stable tag: 0.5.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,12 @@ This tool assists classification; it is not a compliance guarantee.
 The tab is hidden if the site does not support the AI client.
 
 == Changelog ==
+
+= 0.5.0 =
+* Bulk review: select suggestions with checkboxes to accept or reject them together (necessary accepted individually).
+* Reviewer UX matches the main Kjeks review screen — accept by ticking a "Reviewed" checkbox.
+* Norwegian Bokmål (nb_NO) translation, including JavaScript strings.
+* Docs: conservative category bias, ZIP-download install section.
 
 = 0.3.1 =
 * Support single-site installs: the suggest/accept REST routes fall back to manage_options when not multisite.
