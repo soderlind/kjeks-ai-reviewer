@@ -67,7 +67,7 @@ final class ReviewerTab {
 			wp_enqueue_style( 'kjeks-ai-reviewer', KJEKS_AI_URL . 'build/index.css', array( 'wp-components' ), $asset['version'] );
 		}
 
-		wp_set_script_translations( 'kjeks-ai-reviewer', 'kjeks-ai-reviewer' );
+		wp_set_script_translations( 'kjeks-ai-reviewer', 'kjeks-ai-reviewer', KJEKS_AI_DIR . 'languages' );
 
 		wp_localize_script(
 			'kjeks-ai-reviewer',

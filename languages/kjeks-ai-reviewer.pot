@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-20T14:07:31+00:00\n"
+"POT-Creation-Date: 2026-08-20T14:20:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: kjeks-ai-reviewer\n"
@@ -74,4 +74,109 @@ msgstr ""
 
 #: src/SchemaValidator.php:48
 msgid "The suggestion confidence was too low; leaving for manual review."
+msgstr ""
+
+#: assets/src/index.js:30
+msgid "Necessary"
+msgstr ""
+
+#: assets/src/index.js:31
+msgid "Preferences"
+msgstr ""
+
+#: assets/src/index.js:32
+msgid "Analytics"
+msgstr ""
+
+#: assets/src/index.js:33
+msgid "Marketing"
+msgstr ""
+
+#: assets/src/index.js:65
+#, js-format
+msgid "%d%% confidence"
+msgstr ""
+
+#: assets/src/index.js:67
+msgid "No suggestion yet"
+msgstr ""
+
+#: assets/src/index.js:79
+msgid "Grounded"
+msgstr ""
+
+#: assets/src/index.js:99
+msgid "Accept"
+msgstr ""
+
+#: assets/src/index.js:110
+msgid "Reject"
+msgstr ""
+
+#. translators: 1: suggested count, 2: processed count, 3: error count
+#: assets/src/index.js:148
+#, js-format
+msgid "Suggested %1$d of %2$d processed (%3$d skipped)."
+msgstr ""
+
+#: assets/src/index.js:164
+msgid "Suggestion accepted and review recorded."
+msgstr ""
+
+#: assets/src/index.js:187
+msgid "No high-confidence, non-necessary suggestions to accept."
+msgstr ""
+
+#: assets/src/index.js:197
+#, js-format
+msgid "Accepted %d high-confidence suggestions."
+msgstr ""
+
+#: assets/src/index.js:222
+msgid "This site does not support the WordPress AI client, so suggestions are unavailable."
+msgstr ""
+
+#: assets/src/index.js:247
+#, js-format
+msgid "%d unreviewed cookies pending."
+msgstr ""
+
+#: assets/src/index.js:255
+msgid "Working…"
+msgstr ""
+
+#: assets/src/index.js:255
+msgid "Generate suggestions"
+msgstr ""
+
+#: assets/src/index.js:260
+msgid "Accept high-confidence"
+msgstr ""
+
+#: assets/src/index.js:266
+msgid "Generate suggestions automatically once a week"
+msgstr ""
+
+#: assets/src/index.js:282
+msgid "Cookie"
+msgstr ""
+
+#: assets/src/index.js:283
+msgid "Suggested category"
+msgstr ""
+
+#: assets/src/index.js:284
+msgid "Details"
+msgstr ""
+
+#: assets/src/index.js:285
+msgid "Actions"
+msgstr ""
+
+#: assets/src/index.js:296
+msgid "Nothing pending — every cookie has been reviewed."
+msgstr ""
+
+#: assets/src/index.js:305
+msgid "AI Reviewer"
 msgstr ""
