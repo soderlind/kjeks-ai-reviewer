@@ -1,7 +1,19 @@
 {
 	"name": "soderlind/kjeks-ai-reviewer",
-	"description": "AI-assisted classification suggestions for unreviewed cookies in Kjeks.",
+	"description": "AI-assisted category suggestions for unreviewed trackers in Kjeks: proposes a consent category for each newly discovered cookie or script.",
 	"type": "wordpress-plugin",
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin",
+		"kjeks",
+		"cookie-consent",
+		"ai",
+		"wp-ai",
+		"tracker-classification",
+		"consent-management",
+		"gdpr",
+		"privacy"
+	],
 	"license": "GPL-2.0-or-later",
 	"require": {
 		"php": ">=8.3",
