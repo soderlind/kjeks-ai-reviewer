@@ -5,6 +5,16 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-08-31
+
+### Changed
+
+- AI Reviewer now registers as a tab on the core Kjeks "Cookie Consent" screen through the shared `AddonKit\AbstractSettingsTab` base (`kjeks_settings_tabs` filter + `kjeks_settings_enqueue_scripts` action), replacing the legacy `kjeks.networkAdminTabs` JS filter. Requires Kjeks core 1.2.0 or later; the tab hides itself when the base class is unavailable.
+
+### Fixed
+
+- Corrected the readme Contributors slug.
+
 ## [0.5.0] - 2026-08-20
 
 ### Added

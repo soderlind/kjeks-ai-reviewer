@@ -45,7 +45,9 @@ final class Plugin {
 
 		( new SuggestController( $this->dependency ) )->register();
 		( new AcceptController() )->register();
-		( new ReviewerTab( $this->dependency ) )->register();
+		if ( class_exists( \Soderlind\Kjeks\AddonKit\AbstractSettingsTab::class ) ) {
+			( new ReviewerTab( $this->dependency ) )->register();
+		}
 		( new Cron() )->register();
 	}
 
