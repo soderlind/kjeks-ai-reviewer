@@ -7,21 +7,18 @@ declare(strict_types=1);
 
 namespace Soderlind\KjeksAiReviewer\Admin;
 
+use Soderlind\Kjeks\AddonKit\AbstractSettingsTab;
 use Soderlind\KjeksAiReviewer\Dependency;
 
 /**
- * Registers the reviewer as a tab inside the Kjeks network admin screen.
+ * Registers the reviewer as a tab inside the Kjeks "Cookie Consent" screen.
  *
- * Rather than owning a page, the add-on enqueues a bundle on the Kjeks network
- * page. That bundle registers a tab through the `kjeks.networkAdminTabs` JS
- * filter, so the reviewer appears alongside the existing Cookies tab.
+ * Extends the shared {@see AbstractSettingsTab}: the add-on registers its tab
+ * through the `kjeks_settings_tabs` filter and enqueues its own React bundle
+ * through the `kjeks_settings_enqueue_scripts` action, mounting into the
+ * container the base class renders.
  */
-final class ReviewerTab {
-
-	/**
-	 * Matches the Kjeks network page slug (page hook suffix).
-	 */
-	private const KJEKS_HOOK = 'toplevel_page_kjeks-network';
+final class ReviewerTab extends AbstractSettingsTab {
 
 	private Dependency $dependency;
 
@@ -29,53 +26,65 @@ final class ReviewerTab {
 		$this->dependency = $dependency ?? new Dependency();
 	}
 
-	public function register(): void {
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+	/**
+	 * Wire the tab, but only when the core tab shell is available and the AI
+	 * client is usable. Never falls back to a standalone menu.
+	 */
+	public function hooks(): void {
+		if ( ! is_admin() || ! self::core_supports_tabs() || ! $this->dependency->supports_ai() ) {
+			return;
+		}
+
+		add_filter( 'kjeks_settings_tabs', array( $this, 'register_tab' ) );
+		add_action( 'kjeks_settings_enqueue_scripts', array( $this, 'enqueue_tab_scripts' ), 10, 2 );
 	}
 
-	public function enqueue( string $hook ): void {
-		if ( self::KJEKS_HOOK !== $hook ) {
-			return;
-		}
+	/**
+	 * Back-compat alias for the previous public entry point.
+	 */
+	public function register(): void {
+		$this->hooks();
+	}
 
-		// Nothing to show if the AI client is unavailable; the tab hides itself.
-		if ( ! $this->dependency->supports_ai() ) {
-			return;
-		}
+	protected function get_tab_slug(): string {
+		return 'ai-reviewer';
+	}
 
-		$asset_file = KJEKS_AI_DIR . 'build/index.asset.php';
-		$asset      = is_readable( $asset_file )
-			? include $asset_file
-			: array(
-				'dependencies' => array( 'wp-element', 'wp-components', 'wp-api-fetch', 'wp-hooks', 'wp-i18n' ),
-				'version'      => KJEKS_AI_VERSION,
-			);
+	protected function get_tab_label(): string {
+		return __( 'AI Reviewer', 'kjeks-ai-reviewer' );
+	}
 
-		// Depend on kjeks-network so this loads after it, sharing the same hook registry.
-		$dependencies   = $asset['dependencies'];
-		$dependencies[] = 'kjeks-network';
+	protected function get_text_domain(): string {
+		return 'kjeks-ai-reviewer';
+	}
 
-		wp_enqueue_script(
-			'kjeks-ai-reviewer',
-			KJEKS_AI_URL . 'build/index.js',
-			$dependencies,
-			$asset['version'],
-			true
-		);
+	protected function get_build_path(): string {
+		return KJEKS_AI_DIR . 'build/';
+	}
 
-		if ( is_readable( KJEKS_AI_DIR . 'build/index.css' ) ) {
-			wp_enqueue_style( 'kjeks-ai-reviewer', KJEKS_AI_URL . 'build/index.css', array( 'wp-components' ), $asset['version'] );
-		}
+	protected function get_build_url(): string {
+		return KJEKS_AI_URL . 'build/';
+	}
 
-		wp_set_script_translations( 'kjeks-ai-reviewer', 'kjeks-ai-reviewer', KJEKS_AI_DIR . 'languages' );
+	protected function get_languages_path(): string {
+		return KJEKS_AI_DIR . 'languages';
+	}
 
-		wp_localize_script(
-			'kjeks-ai-reviewer',
-			'kjeksAiReviewer',
-			array(
-				'restBase' => esc_url_raw( rest_url( 'kjeks-ai/v1' ) ),
-				'nonce'    => wp_create_nonce( 'wp_rest' ),
-			)
+	protected function get_plugin_version(): string {
+		return KJEKS_AI_VERSION;
+	}
+
+	protected function get_localized_name(): string {
+		return 'kjeksAiReviewer';
+	}
+
+	/**
+	 * @return array<string, mixed>
+	 */
+	protected function get_localized_data(): array {
+		return array(
+			'restBase' => esc_url_raw( rest_url( 'kjeks-ai/v1' ) ),
+			'nonce'    => wp_create_nonce( 'wp_rest' ),
 		);
 	}
 }

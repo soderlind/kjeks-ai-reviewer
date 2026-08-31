@@ -1,9 +1,8 @@
 /**
- * Kjeks AI Reviewer — registers an "AI Reviewer" tab into the Kjeks network
- * admin screen via the `kjeks.networkAdminTabs` filter.
+ * Kjeks AI Reviewer — mounts the "AI Reviewer" React app into the tab container
+ * rendered by the core Cookie Consent screen (`kjeks_settings_tabs`).
  */
-import { createElement as h, useState, useEffect, useMemo, useCallback } from '@wordpress/element';
-import { addFilter } from '@wordpress/hooks';
+import { createElement as h, render, useState, useEffect, useMemo, useCallback } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import { __, sprintf } from '@wordpress/i18n';
 import {
@@ -452,13 +451,9 @@ function ReviewerApp() {
 	);
 }
 
-addFilter( 'kjeks.networkAdminTabs', 'kjeks-ai-reviewer', ( tabs ) => {
-	return [
-		...tabs,
-		{
-			name: 'ai-reviewer',
-			title: __( 'AI Reviewer', 'kjeks-ai-reviewer' ),
-			render: () => h( ReviewerApp ),
-		},
-	];
+document.addEventListener( 'DOMContentLoaded', () => {
+	const root = document.getElementById( 'kjeks-ai-reviewer-app' );
+	if ( root ) {
+		render( h( ReviewerApp ), root );
+	}
 } );

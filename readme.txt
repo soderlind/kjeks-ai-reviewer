@@ -1,10 +1,10 @@
 === Kjeks AI Reviewer ===
-Contributors: soderlind
+Contributors: PerS
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.3
 Requires Plugins: kjeks
-Stable tag: 0.5.0
+Stable tag: 0.6.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ This tool assists classification; it is not a compliance guarantee.
 The tab is hidden if the site does not support the AI client.
 
 == Changelog ==
+
+= 0.6.0 =
+* AI Reviewer registers as a tab via the shared Kjeks AddonKit base (requires Kjeks core 1.2.0). Replaces the legacy JS-filter tab registration.
+* Corrected the readme Contributors slug.
 
 = 0.5.0 =
 * Bulk review: select suggestions with checkboxes to accept or reject them together (necessary accepted individually).
